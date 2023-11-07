@@ -1701,6 +1701,8 @@ input, select, textarea {
 		
 		.course {
 			cursor: pointer;
+			text-decoration-line: underline;
+			text-decoration-thickness: 0.05px;
 		}
 		
 		
