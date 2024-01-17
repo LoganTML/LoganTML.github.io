@@ -44,7 +44,7 @@
 								<!--<span class="image main"><img src="images/pic01.jpg" alt="" /></span> -->
 								<p>Hey!</p>
 								<p>My name's Logan and I'm a U3 Computer Science - Artificial Intelligence student at McGill University in Montreal, QC.  
-									I'm extremely interested in both the theoretical and practical aspects of both AI and Software
+									I'm extremely interested in the theoretical and practical aspects of both AI and Software
 									Development, and I'm always looking for new opportunities to learn and grow as a developer and researcher.
 									I'm especially passionate about AI/ML, including its applications to other fields and industries, as well as
 									further research into its ethical impacts and possible improvements.
@@ -62,10 +62,10 @@
 								<p>Here are some of the projects I've worked on recently:</p>
 								<ul>
 									<li>
-										<a href="https://logantml.github.io/RR-Visualization/"><b>Red Rising Social Networks</b></a><br>
-										Using Python, specifically NetworkX and PyVis, I constructed a social network for each book in the series Red Rising using 
-										only Python and a .txt file of each book, and analyzed the performance of several centrality measures and the Louvain Community 
-										Detection algorithm on each network.  A demo, as well as a more detailed explanation is available 
+										<b><a href="https://rr-visualization.vercel.app/">Red Rising Social Networks</a></b><br>
+										Using Python, specifically the libraries NetworkX and PyVis, I constructed a social network for each book in the series Red Rising from 
+										a .txt file of each book, and analyzed the performance of several centrality measures and the Louvain Community 
+										Detection algorithm on each network.  The visualizations, as well as a more detailed explanation is available 
 										at the link above, and the source code is available on my <a href="https://github.com/LoganTML/RR-Visualization">GitHub</a>.
 									</li>
 									<li>
@@ -75,13 +75,13 @@
 										students in the class and 100% of its games against a random agent, achieving an A grade for the project.
 									</li>
 									<li>
-										<b>COMP 551 - Research Papers</b><br>
+										<b>COMP 551 - Papers</b><br>
 										In COMP 551 I completed four team projects, for which we implemented a variety of ML models (linear regression, logistic regression, 
 										MLPs, CNNs, Naive Bayes, and BERT classification) and wrote reports on our findings, achieving a cumulative A- grade 
 										across the projects.
 									</li>
 									<li>
-										<a href="https://chrome.google.com/webstore/detail/tabulator/jmblkmlknemipmflaegcnaiadfpfekbd?hl=en&authuser=1"><b>Tabulator</b></a><br>
+										<b><a href="https://chrome.google.com/webstore/detail/tabulator/jmblkmlknemipmflaegcnaiadfpfekbd?hl=en&authuser=1">Tabulator</a></b><br>
 										Using JavaScript, I created a chrome extension, Tabulator, which allows users to quickly group tabs by URL using its simple, single-button interface.  
 										It is currently available on the Chrome Web Store, with over six users (seven) and a 5-star rating.
 									</li>
@@ -91,7 +91,7 @@
 										voice chat rooms with people nearby.  We receieved the Huawei Customs Challenge: Best Pandemic Life-Related Hack award for our project, winning a Huawei smartwatch! :D
 									</li>
 									<li>
-										<b>COMP 322 Version Control System</b><br>
+										<b>COMP 322 - Version Control System</b><br>
 										For the class COMP 322, I created a local version control system using C++, allowing users to save and track changes between versions 
 										of a file through the command line.
 									</li>
@@ -167,213 +167,423 @@
 						<!-- Education -->
 						<article id="education">
 							<h2 class="major">Education</h2>
-							<h3 class="school-name" onclick="showSchoolDescription('mcgill')">McGill University</h3>
+							
 							<div id="mcgill" class="school-list">
-								<p>	
-									Bachelor of Science: Computer Science - Artificial Intelligence (2025)<br>
-									GPA: 3.61/4.0<br>
-									VP Internal: <a href="https://ssmu.ca/clubs/athletics-recreation-clubs/ssmu-power-lifting/">SSMU Powerlifting Club</a><br>
-									Member: McGill Men's Volleyball Club Team, Compete McGill, McGill AI Society<br>
-									Recipient: Suncor Emerging Leaders in Engineering Award<br>
-									Courses:
-									<ul>
-										<li><span class="course" onclick="showCourseDescription('COMP551')">COMP 551</span>, Applied Machine Learning, A-</li>
-										<li><span class="course" onclick="showCourseDescription('COMP424')">COMP 424</span>, Artificial Intelligence</li>
-										<li><span class="course" onclick="showCourseDescription('COMP421')">COMP 421</span>, Database Systems</li>
-										<li><span class="course" onclick="showCourseDescription('COMP370')">COMP 370</span>, Introduction to Data Science</li>
-										<li><span class="course" onclick="showCourseDescription('COMP360')">COMP 360</span>, Algorithm Design, A</li>
-										<li><span class="course" onclick="showCourseDescription('COMP322')">COMP 322</span>, Introduction to C++, A</li>
-										<li><span class="course" onclick="showCourseDescription('COMP321')">COMP 321</span>, Programming Challenges, A</li>
-										<li><span class="course" onclick="showCourseDescription('COMP273')">COMP 273</span>, Introduction to Computer Systems</li>
-										<li><span class="course" onclick="showCourseDescription('MATH323')">MATH 323</span>, Probability, A</li>
-										<li><span class="course" onclick="showCourseDescription('MATH263')">MATH 263</span>, Ordinary Differential Equations for Engineers, A</li>
-										<li><span class="course" onclick="showCourseDescription('MATH262')">MATH 262</span>, Intermediate Calculus, A</li>
-										<li><span class="course" onclick="showCourseDescription('Misc')">Other</span>
-									</ul>
-								</p>
-								<!-- I know this runs in O(n) but I only have 40 classes in my degree so it'll be okay -->
-								<!-- I also definitely should have used JSON for this but oh well -->
-								<div id="COMP551" class="course-description">
-									<p>
-										Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-551">COMP 551 (Applied Machine Learning)</a><br>
-										Implemented ML models and wrote papers on the following topics:
-										<ul>
-											<li>Performed a linear regression with both analytical and stochastic batch gradient descent methods on the <a href="https://www.kaggle.com/datasets/elikplim/eergy-efficiency-dataset">ENB 2012 Energy Efficiency Dataset</a>. Performed a hyperparameter search to determine the best values for train/test split sizes, batch sizes, and learning rates</li>
-											<li>Implemented an MLP model on the <a href="https://www.cs.toronto.edu/~kriz/cifar.html">CIFAR-10 dataset</a> to classify images. Tested its performance with differing numbers of layers (0, 1, 2), activation functions (ReLU, Tanh, Leaky ReLU), and L1 vs L2 regularization</li>
-											<li>Performed classification on the <a href="http://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz">IMDb review dataset</a> using both Naive Bayes and Bidirectional Encoder Representations from Transformers (BERT) models. Used ADAM as an optimizer for BERT. Tested the performance of different train/test split sizes on the Naive Bayes model</li>
-											<li>Attempted to reproduce the results of the paper <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Li_Deep_Fair_Clustering_for_Visual_Learning_CVPR_2020_paper.pdf">Deep Fair Clustering for Visual Learning</a> on the datasets MNIST, RMNIST, and USPS</li>
-										</ul>
-										Studied the topics:
-											<ul>
-												<li>Parameter Estimation</li>
-												<li>Linear Regression</li>
-												<li>Logistic and Softmax Regression</li>
-												<li>Gradient Descent Methods (SGD, Batch SGD, Momentum, ADAM)</li>
-												<li>Regularization (L1, L2, Data Augmentation, Noise Robustness, Early Stopping, Dropout)</li>
-												<li>Generalization</li>
-												<li>Perceptrons (Optimization, Gaussian Bases, Sigmoid Bases, MLPs, Logistic/Hyperbolic Tangent/ReLU/Leaky ReLU/Softplus Activation Functions)</li>
-												<li>Automatic Differentiation (Jacobian Matrices, Chain Rule, Gradient Calculations)</li>
-												<li>Convolutional Neural Networks</li>
-												<li>Recurrent Neural Networks (Vec2Seq, Seq2Vec, Seq2Seq, Transformers and Language Models)</li>
-												<li>Naive Bayes</li>
-												<li>Nearest Neighbours</li>
-												<li>Classification and Regression Trees</li>
-												<li>Bagging (Bootstrap Aggregation, Decision Trees, Random Forests)</li>
-												<li>Boosting (AdaBoost, Gradient Boosting)</li>
-												<li>Unsupervisted Learning (Clustering- K-means, K-medoids, Agglomorative)</li>
-												<li>Dimensionality Reduction (Principal Component Analysis, Covariance Matrices, Singular Value Decomposition, Autoencoders)</li>
-											</ul>
+							<h2 class="school-name">McGill University</h3>
+							<p>	
+								Bachelor of Science: Computer Science - Artificial Intelligence (2025)<br>
+								GPA: 3.64/4.0<br>
+								VP Internal: <a href="https://ssmu.ca/clubs/athletics-recreation-clubs/ssmu-power-lifting/">SSMU Powerlifting Club</a><br>
+								Member: McGill Men's Volleyball Club Team, Compete McGill, McGill AI Society<br>
+								Recipient: Suncor Emerging Leaders in Engineering Award<br>
+								Courses: <span class="dept-name" onclick="showDepartmentClasses('COMP')">Computer Science</span> / <span class="dept-name" onclick="showDepartmentClasses('MATH')">Mathematics and Statistics</span> / <span class="dept-name" onclick="showDepartmentClasses('Misc')">Other</span>
+								
+								<div id="COMP" class="dept-list">
+									<details>
+										<summary>COMP 579 (Reinforcement Learning)</summary><br>
+										<p>
+											Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-579">COMP 579 (Reinforcement Learning)</a><br>
+											In progress (Winter 2024).
+										</p>
+									</details>
+
+									<details>
+										<summary>COMP 551 (Applied Machine Learning)</summary><br>
+										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-551">COMP 551 (Applied Machine Learning)</a><br></p>
 											
-										
-									</p>
-
-								</div>
-
-								<div id="COMP424" class="course-description">
-									<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-424">COMP 424 (Artificial Intelligence)</a><br>
-										<ul>
-											<li>Created an agent, available on my <a href="https://github.com/LoganTML/COMP-424-Final-Project/tree/main">GitHub</a>, that plays the game "Colosseum Survival!", and beats a random agent 99.8% of the time</li>
-											<li>Designed and implemented an algorithm using Hill Climbing that finds a solution for the N Queens problem up to approximately N=120</li>
-										</ul>
-										Studied the topics:
+										<h3>Projects</h3>
 											<ul>
-												<li>Search algorithms: Uninformed (BFS, DFS, UCS, DLS, IDS), Informed (Best-First, Heuristic, A*), and Local (Hill Climbing, Simulated Annealing, Parallel, Beam, Genetic)</li>
-												<li>Constraint satisfaction problems (AC-3, Backtracking Search, Forward Checking)</li>
-												<li>Adversarial search algorithms (Minimax, Alpha-Beta Pruning, Monte Carlo Tree Search, Upper Confidence Trees, Rapid Action-Value Estimation)</li>
-												<li>Searching under uncertainty (Belief Space, Conformant Planning, AND-OR Search)</li>
-												<li>Decision-making under uncertainty (Bayesian Network Inference, Marginal Probabilities, Causal Reasoning, Maximum A Posteriori Queries, Variable Elimination, DAGs, and Conditional Independence)</li>
-												<li>Learning bayesian networks (Supervised Learning, Maximum Likelihood Estimation, Laplace Smoothing)</li>
-												<li>Learning with missing values (Expectation Maximization, K-means Clustering)</li>
-												<li>Causal graphical models (Correlation vs Causation, Back-door Criterion)</li>
-												<li>Time series models (Markov Chains, Hidden Markov Models, Markov Decision Processes, Forward/filtering & Backward/smoothing Algorithms, Kalman and Histogram Filters)</li>
-												<li>Utility Theory (Maximizing Expected Utility, Value of Perfect Information)</li>
-												<li>Reinforcement Learning (Bandit Algorithms, Deep Q Networks, Bellman Equations, Policy Iteration)</li>
+												<li>Performed a linear regression with both analytical and stochastic batch gradient descent methods on the <a href="https://www.kaggle.com/datasets/elikplim/eergy-efficiency-dataset">ENB 2012 Energy Efficiency Dataset</a>. Performed a hyperparameter search to determine the best values for train/test split sizes, batch sizes, and learning rates.</li>
+												<li>Implemented an MLP model on the <a href="https://www.cs.toronto.edu/~kriz/cifar.html">CIFAR-10 dataset</a> to classify images. Tested its performance with differing numbers of layers (0, 1, 2), activation functions (ReLU, Tanh, Leaky ReLU), and L1 vs L2 regularization.</li>
+												<li>Performed classification on the <a href="http://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz">IMDb review dataset</a> using both Naive Bayes and Bidirectional Encoder Representations from Transformers (BERT) models. Used ADAM as an optimizer for BERT. Tested the performance of different train/test split sizes on the Naive Bayes model.</li>
+												<li>Attempted to reproduce the results of the paper <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Li_Deep_Fair_Clustering_for_Visual_Learning_CVPR_2020_paper.pdf">Deep Fair Clustering for Visual Learning</a> on the datasets MNIST, RMNIST, and USPS.</li>
 											</ul>
-									</p>
-								</div>
+											<h3>Topics</h3>
+												<ul>
+													<li>Parameter Estimation</li>
+													<li>Linear Regression</li>
+													<li>Logistic and Softmax Regression</li>
+													<li>Gradient Descent Methods (SGD, Batch SGD, Momentum, ADAM)</li>
+													<li>Regularization (L1, L2, Data Augmentation, Noise Robustness, Early Stopping, Dropout)</li>
+													<li>Generalization</li>
+													<li>Perceptrons (Optimization, Gaussian Bases, Sigmoid Bases, MLPs, Logistic/Hyperbolic Tangent/ReLU/Leaky ReLU/Softplus Activation Functions)</li>
+													<li>Automatic Differentiation (Jacobian Matrices, Chain Rule, Gradient Calculations)</li>
+													<li>Convolutional Neural Networks</li>
+													<li>Recurrent Neural Networks (Vec2Seq, Seq2Vec, Seq2Seq, Transformers and Language Models)</li>
+													<li>Naive Bayes</li>
+													<li>Nearest Neighbours</li>
+													<li>Classification and Regression Trees</li>
+													<li>Bagging (Bootstrap Aggregation, Decision Trees, Random Forests)</li>
+													<li>Boosting (AdaBoost, Gradient Boosting)</li>
+													<li>Unsupervisted Learning (Clustering- K-means, K-medoids, Agglomorative)</li>
+													<li>Dimensionality Reduction (Principal Component Analysis, Covariance Matrices, Singular Value Decomposition, Autoencoders)</li>
+												</ul>
+									</details>
+									
+									<details>
+										<summary>COMP 424 (Artificial Intelligence)</summary><br>
 
-								<div id="COMP421" class="course-description">
-									<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-421">COMP 421 (Database Systems)</a></p>
-									<ul>
-										<li>Designed, implemented, and refined a relational database schema in DB2 to store information for a soccer tournament based on a set of user requirements. Using JDBC, built a Java interface for performing CRUD operations</li>
-										<li>Entity-Relationship modeling</li>
-										<li>Relational Algebra</li>
-										<li>SQL (PostgreSQL, MySQL)</li>
-										<li>Buffer Management</li>
-										<li>Indexing</li>
-										<li>Query Evaluation</li>
-										<li>Big Data (Distributed Data Processing with Hadoop, Map-Reduce)</li>
-										<li>Transactions and Concurrency</li>
-										<li>Graph Databases</li>
-									</ul>
-								</div>
+										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-424">COMP 424 (Artificial Intelligence)</a><br></p>
+										<h3>Projects</h3>
+										<ul>
+											<li>Created an agent "", available on my <a href="https://github.com/LoganTML/COMP-424-Final-Project/tree/main">GitHub</a>, that plays the game "Colosseum Survival!".  It achieved a win rate of 
+												63.78% against bots created by other students in the class, and 100% against a random agent.  We wrote a report that compared 
+												our implementation to any possible alternatives, and examined possibilities and strategies for creating a more powerful agent, achieving an A grade for 
+												the project.</li>
+											<li>Designed and implemented an algorithm using Hill Climbing that finds a solution for the N Queens problem up to approximately N=120.</li>
+										</ul>
+											<h3>Topics</h3>
+												<ul>
+													<li>Search algorithms: Uninformed (BFS, DFS, UCS, DLS, IDS), Informed (Best-First, Heuristic, A*), and Local (Hill Climbing, Simulated Annealing, Parallel, Beam, Genetic)</li>
+													<li>Constraint satisfaction problems (AC-3, Backtracking Search, Forward Checking)</li>
+													<li>Adversarial search algorithms (Minimax, Alpha-Beta Pruning, Monte Carlo Tree Search, Upper Confidence Trees, Rapid Action-Value Estimation)</li>
+													<li>Searching under uncertainty (Belief Space, Conformant Planning, AND-OR Search)</li>
+													<li>Decision-making under uncertainty (Bayesian Network Inference, Marginal Probabilities, Causal Reasoning, Maximum A Posteriori Queries, Variable Elimination, DAGs, and Conditional Independence)</li>
+													<li>Learning bayesian networks (Supervised Learning, Maximum Likelihood Estimation, Laplace Smoothing)</li>
+													<li>Learning with missing values (Expectation Maximization, K-means Clustering)</li>
+													<li>Causal graphical models (Correlation vs Causation, Back-door Criterion)</li>
+													<li>Time series models (Markov Chains, Hidden Markov Models, Markov Decision Processes, Forward/filtering & Backward/smoothing Algorithms, Kalman and Histogram Filters)</li>
+													<li>Utility Theory (Maximizing Expected Utility, Value of Perfect Information)</li>
+													<li>Reinforcement Learning (Bandit Algorithms, Deep Q Networks, Bellman Equations, Policy Iteration)</li>
+												</ul>
+									</details>
 
-								<div id="COMP370" class="course-description">
-									<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-370">COMP 370 (Introduction to Data Science)</a></p>
-									<ul>
-										<li>Wrote a report on the coverage of Taylor Swift in the media.  Our group collected and cleaned ~700 articles from NewsAPI.org, 
-											then conducted an open coding to develop a typology before manually annotating the rest of the data.  We also manually characterized 
-											the sentiment of each article, then created several graphs to visualize and further our understanding of the relationship between the two.
-										</li>
-									</ul>
-
-									Studied the following topics:
-									<ul>
-										<li>The Data Science Process</li>
-										<li>Unix and the Cloud (Servers, SSH, Working Remotely, Vim)</li>
-										<li>Core Tools (Project Structure, Unit Tests, Jupyter, Bokeh)</li>
-										<li>Version Control (Git/GitHub)</li>
-										<li>Question Formulation</li>
-										<li>Data Collection (APIs, JSON, Scraping, Sampling)</li>
-										<li>Data Annotation (Typologies, Manual Annotation/Open Coding, Automated Annotation)</li>
-										<li>Analysis (Statistical + Network Analysis)</li>
-									</ul>
-								</div>
-
-								<div id="COMP360" class="course-description">
-									<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-360">COMP 360 (Algorithm Design)</a></p>
-									<ul>
-										<li>Network Flows (Ford-Fulkerson, Max-Flow/Min-Cut, Capacity Scaling, Bipartite Matching, Image Segmentation, Circulation)</li>
-										<li>Linear Programming (Geometry, Duality, Complementary Slackness, Simplex Method)</li>
-										<li>Complexity Theory (P/NP class definitions, Reductions, NP-Completeness)</li>
-										<li>Approximation Algorithms</li>
-									</ul>
-								</div>
-
-								<div id="COMP322" class="course-description">
-									<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-322">COMP 322 (Introduction to C++)</a></p>
-									<ul>
-										<li>Studied software fundamentals (OOP, File I/O, etc.) in C++</li>
-										<li>Using plain C++, built a local version control system, which saves and tracks changes between versions of a file through the command line</li>
-									</ul>
-								</div>
-
-								<div id="COMP321" class="course-description">
-									<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-321">COMP 321 (Programming Challenges)</a></p>
-									<ul>
-										<li>Studied Competitive Programming- developing optimal solutions to word problems using data structures and algorithms</li>
-										<li>Participated in NP Compete, the ICPC qualifier hosted by the McGill Competitive Programming Club, as well as three in-class competitions</li>
-									</ul>
-								</div>
-
-								<div id="COMP308" class="course-description">
-									<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-308">COMP 308 (Computer Systems Lab)</a></p>
-									<ul>
-										<li>Using Intel x86 Assembly (TASM) emulated on DOSBOX, OpenGL, GLSL, and glfw3 compiled with CMake, built a game of Pong playable against an "AI opponent" (it used a single if statement to determine where to move lol)</li>
-									</ul>
-								</div>
-
-								<div id="COMP273" class="course-description">
-									<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-273">COMP 273 (Introduction to Computer Systems)</a></p>
-									<ul>
-										<li>Using a Logism circuit simulator, designed a functional CPU with an ALU and connections to peripherals</li>
-									</ul>
-								</div>
-
-								<div id="MATH323" class="course-description">
-									<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/math-323">MATH 323 (Probability)</a></p>
-								</div>
-								<div id="MATH263" class="course-description">
-									<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/math-263">MATH 263 (Ordinary Differential Equations for Engineers)</a></p>
-								</div>
-								<div id="MATH262" class="course-description">
-									<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/math-262">MATH 262 (Intermediate Calculus)</a></p>
-								</div>
-								<div id="MATH208" class="course-description">
-									<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/math-208">MATH 208 (Introduction to Statistical Computing)</a></p>
-								</div>
-
-								<div id="Misc" class="course-description">
-									<p>Other courses taken:</p>
-									<ul>
+									<details>
+										<summary>COMP 421 (Database Systems)</summary><br>
+										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-421">COMP 421 (Database Systems)</a></p>
 										
-										<li><a href="https://www.mcgill.ca/study/2023-2024/courses/chem-181">CHEM 181 (World of Chemistry: Food)</a></li>
-										<li><a href="https://www.mcgill.ca/study/2023-2024/courses/chem-120">CHEM 120 (General Chemistry 2)</a></li>
-										<li><a href="https://www.mcgill.ca/study/2023-2024/courses/facc-100">FACC 100 (Introduction to the Engineering Profession)</a></li>
-										<li><a href="https://www.mcgill.ca/study/2023-2024/courses/phys-142">PHYS 142 (Electromagnetism and Optics)</a></li>
+										<h3>Projects</h3>
+										<ul>
+											<li>Designed, implemented, and refined a relational database schema in DB2 to store information for a soccer tournament based 
+												on a set of user requirements. Using JDBC, built a Java interface capable of performing CRUD operations on the database.</li>
+										</ul>
+										<h3>Topics</h3>
+										<ul>
+											<li>Entity-Relationship modeling</li>
+											<li>Relational Algebra</li>
+											<li>SQL (PostgreSQL, MySQL)</li>
+											<li>Buffer Management</li>
+											<li>Indexing</li>
+											<li>Query Evaluation</li>
+											<li>Big Data (Distributed Data Processing with Hadoop, Map-Reduce)</li>
+											<li>Transactions and Concurrency</li>
+											<li>Graph Databases</li>
+										</ul>
+									</details>
+
+									<details>
+										<summary>COMP 370 (Introduction to Data Science)</summary><br>
+										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-370">COMP 370 (Introduction to Data Science)</a></p>
 										
-									</ul>
-								</div>
+										<h3>Projects</h3>
+										<ul>
+											<li>Wrote a report on the coverage of Taylor Swift in the media.  Our group collected and cleaned ~700 articles from NewsAPI.org, 
+												then conducted an open coding to develop a typology before manually annotating the rest of the data.  We also manually characterized 
+												the sentiment of each article, then created several graphs to visualize and further our understanding of the relationship between the two.
+											</li>
+										</ul>
+
+										<h3>Topics</h3>
+										<ul>
+											<li>The Data Science Process</li>
+											<li>Unix and the Cloud (Servers, SSH, Working Remotely, Vim)</li>
+											<li>Core Tools (Project Structure, Unit Tests, Jupyter, Bokeh)</li>
+											<li>Version Control (Git/GitHub)</li>
+											<li>Question Formulation</li>
+											<li>Data Collection (APIs, JSON, Scraping, Sampling)</li>
+											<li>Data Annotation (Typologies, Manual Annotation/Open Coding, Automated Annotation)</li>
+											<li>Analysis (Statistical + Network Analysis)</li>
+										</ul>
+									</details>
+
+									<details>
+										<summary>COMP 360 (Algorithm Design)</summary><br>
+										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-360">COMP 360 (Algorithm Design)</a></p>
+										<h3>Topics</h3>
+										<ul>
+											<li>Network Flows (Ford-Fulkerson, Max-Flow/Min-Cut, Capacity Scaling, Bipartite Matching, Image Segmentation, Circulation)</li>
+											<li>Linear Programming (Geometry, Duality, Complementary Slackness, Simplex Method)</li>
+											<li>Complexity Theory (P/NP class definitions, Reductions, NP-Completeness)</li>
+											<li>Approximation Algorithms</li>
+										</ul>
+
+									</details>
+
+									<details>
+										<summary>COMP 322 (Introduction to C++)</summary><br>
+										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-322">COMP 322 (Introduction to C++)</a></p>
+										<h3>Projects</h3>
+										<ul>
+											<li>Using plain C++, built a local version control system, capable of saving and tracking changes between versions of a file through a command line interface.</li>
+										</ul>
+										<h3>Topics</h3>
+										<ul>
+											<li>Studied programming fundamentals (OOP, File I/O, etc.) in C++</li>
+										</ul>
+									</details>
+
+									<details>
+										<summary>COMP 321 (Programming Challenges)</summary><br>
+										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-321">COMP 321 (Programming Challenges)</a></p>
+										<h3>Projects</h3>
+										<ul>
+											<li>Participated in NP Compete, the ICPC qualifier hosted by the McGill Competitive Programming Club, as well as three in-class competitions.</li>
+										</ul>
+										<h3>Topics</h3>
+										<ul>
+											<li>Competitive Programming- developing optimal solutions to word problems using data structures and algorithms</li>
+											<li>Divide and Conquer</li>
+											<li>Dynamic Programming</li>
+											<li>Greedy Algorithms</li>
+											<li>Graph Algorithms- traversals, toplogical sort, MSTs, shortest paths, flow networks</li>
+											<li>Sorting Algorithms- O(n^2) (Bubble/Selection/Insertion), O(nlogn) (Merge/Heap/Quick), O(n) (Counting/Radix/Bucket)</li>
+											<li>Computational Geometry- points, lines, circles, triangles, rectangles, polygons, dot/cross products, segment intersections, convex hull problem</li>
+										</ul>
+										
+									</details>
+
+									<details>
+										<summary>COMP 308 (Computer Systems Lab)</summary><br>
+										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-308">COMP 308 (Computer Systems Lab)</a></p>
+										<h3>Projects</h3>
+										<ul>
+											<li>Using Intel x86 Assembly (TASM) emulated on DOSBOX, OpenGL, GLSL, and glfw3 compiled with CMake, built a game of Pong playable against an "AI opponent" (it used a single if statement to determine where to move lol).</li>
+										</ul>
+										<h3>Topics</h3>
+										<ul>
+											<li>Graphics Cards- card architecture, integration, memory models</li>
+											<li>x86 Assembly- registers, commands, subroutines, code structure</li>
+											<li>Graphics- drawing dots, lines, triangles etc. in assembly.  Colouring and more complex shapes in C/OpenGL.  Shading in GLSL</li>
+										</ul>
+									</details>
+
+									<details>
+										<summary>COMP 303 (Software Design)</summary><br>
+										<p>Course website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-303">COMP 303 (Software Design)</a></p>
+										<h3>Topics</h3>
+										<ul>
+											<li>Principles, mechanisms, techniques, and tools for object-oriented software design and its implementation, 
+												including encapsulation, design patterns, and unit testing.</li>
+										</ul>
+									</details>
+
+									<details>
+										<summary>COMP 302 (Programming Languages and Paradigms)</summary><br>
+										<p>Course website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-302">COMP 302 (Programming Languages and Paradigms)</a></p>
+										<h3>Topics</h3>
+										<ul>
+											<li>Functional Programming- OCaml fundamentals</li>
+											<li>Fundamental Concepts in Programming Languages- higher-order functions, stateful vs stateless computation, 
+												modelling objects as closures, deferring control (via exceptions & continuations),
+												polymorphism, partial evaluation, lazy programming, modules</li>
+											<li>Applying Reasoning to Programs- typechecking, type inference, induction, operational semantics</li>
+											<li>Programming Language Design- formal grammars, operational semantics, type systems, 
+												interpreters, polymorphism, subtyping</li>
+										</ul>
+									</details>
+
+									<details>
+										<summary>COMP 273 (Introduction to Computer Systems)</summary><br>
+										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-273">COMP 273 (Introduction to Computer Systems)</a></p>
+										<h3>Projects</h3>
+										<ul>
+											<li>Using a Logism circuit simulator, designed a functional 8-bit CPU containing: an ALU that can perform mathematical operations on data, 
+												RAM from which data can be saved/loaded, a CU, a clock, and a display.
+											</li>
+										</ul>
+										<h3>Topics</h3>
+										<ul>
+											<li>Number representations, combinatorial and sequential digital circuits, MIPS instructions and
+												architecture data-paths and control, caches, virtual memory, interrupts and exceptions,
+												pipelining.</li>
+										</ul>
+									</details>
+
+									<details>
+										<summary>COMP 251 (Algorithms and Data Structures)</summary><br>
+										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-251">COMP 251 (Algorithms and Data Structures)</a></p>
+									</details>
+								
+									<details>
+										<summary>COMP 206 (Introduction to Software Systems)</summary>
+										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-206">COMP 206 (Introduction to Software Systems)</a><br></p>
+									</details>
+
 
 								</div>
-								<hr />
-								<h3 class="school-name" onclick="showSchoolDescription('uvic')">University of Victoria</h3>
-								<div id="uvic" class="school-list">
-									<p>
-										Engineering (General)<br>
-										GPA: 8.26/9.0<br>
-										First Year Representative: UVic Engineering Students' Society<br>
-										Indigenous Engineering and Computer Science Entrance Scholarship<br>
-										University of Victoria Entrance Scholarship<br>
-										Transferred to McGill after 1 year<br><br>
-										Fundamentals of Programming with Engineering Applications, Introduction to Programming: II, 
-										Design and Communication I, Design and Communication II, Engineering Mechanics, 
-										Calculus I, Calculus II, Matrix Algebra for Engineers, Logic and Foundations,
-										Introductory Physics I, Introductory Physics II
-									</p>
+
+								<div id="MATH" class="dept-list">
+									<details>
+										<summary>MATH 324 (Statistics)</summary><br>
+										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/math-324">MATH 324 (Statistics)</a><br></p>
+										<h3>Topics</h3>
+										<ul>
+											<li>Sampling distributions including the Normal, Chi-squared, Student’s and F distributions</li>
+											<li>Unbiased estimation, confidence intervals, sample size calculation</li>
+											<li>Consistency and asymptotic normality, sufficiency, completeness, uniformly minimum variance unbiased estimators (UMVUE),
+												method of moments, maximum likelihood estimates (MLE’s)</li>
+											<li>Hypothesis testing, Neyman-Pearson theory of testing statistical hypothesis, uniformly most powerful tests (UMP), the
+												likelihood ratio test</li>
+											<li>Linear models, method of least squares, simple linear regression. Matched-pairs design. Analysis of variance, one-way layout</li>
+											<li>Chi-square test, contingency tables</li>
+										</ul>
+									</details>
+
+									<details>
+										<summary>MATH 323 (Probability)</summary><br>
+										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/math-323">MATH 323 (Probability)</a><br></p>
+										<h3>Topics</h3>
+										<ul>
+											<li>Sample space, events, conditional probability, independence of events, Bayes’ Theorem</li>
+											<li>Basic combinatorial probability, random variables, discrete and continuous univariate and multivariate 
+												distributions</li>
+											<li>Moment generating functions</li>
+											<li>Independence of random variables, Chebyshev’s Inequality, the central limit theorem, the weak law of large numbers</li>
+										</ul>
+									</details>
+
+									<details>
+										<summary>MATH 263 (Ordinary Differential Equations for Engineers)</summary><br>
+										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/math-263">MATH 263 (Ordinary Differential Equations for Engineers)</a><br></p>
+										<h3>Topics</h3>
+										<ul>
+											<li>First Order ODEs- introduction, definitions and geometrical interpretation; existence
+												and uniqueness theorem; linear equations; separable equations; exact equations and
+												integrating factors; applications</li>
+											<li>Second and higher order linear ODEs: linear homogeneous equations, fundamental
+												systems of solutions, Wronskians; Review of complex numbers; Constant coefficient
+												equations and Cauchy-Euler equations; Inhomogeneous equations (undetermined coef-
+												ficients and variation of parameters); reduction of order; applications</li>
+											<li>Laplace Transforms: definition and properties; solution of initial value problems for
+												constant coefficient equations; step functions, discontinuous and periodic forcing func-
+												tions, impulse functions; convolutions; applications</li>
+											<li>Series Solutions: Regular Points, Regular Singular Points and Frobenius method</li>
+											<li>Linear Systems of ODEs: Review of linear Algebra, Solutions and stability</li>
+											<li>Introduction to numerical methods and nonlinear differential equations</li>
+										</ul>
+									</details>
+
+									<details>
+										<summary>MATH 262 (Intermediate Calculus)</summary><br>
+										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/math-262">MATH 262 (Intermediate Calculus)</a><br></p>
+										<h3>Topics</h3>
+										<ul>
+											<li>Series and power series</li>
+											<li>Vector functions and curves</li>
+											<li>Partial differentiation and differential calculus for vector valued functions</li>
+											<li>Unconstrained and constrained optimization problems</li>
+											<li>Multiple integrals, including surface area and change of variables</li>
+										</ul>
+									</details>
+
+									<details>
+										<summary>MATH 223 (Linear Algebra)</summary><br>
+										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/math-223">MATH 223 (Linear Algebra)</a><br></p>
+										<h3>Topics</h3>
+										<ul>
+											<li>Review of matrix algebra, determinants and systems of linear equations</li>
+											<li>Vector spaces, linear operators and their matrix representations, orthogonality</li>
+											<li>Eigenvalues and eigenvectors, diagonalization of Hermitian matrices</li>
+											<li>Applications</li>
+										</ul>
+									</details>
+
+									<details>
+										<summary>MATH 208 (Introduction to Statistical Computing)</summary><br>
+										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/math-208">MATH 208 (Introduction to Statistical Computing)</a><br></p>
+										<h3>Topics</h3>
+										<ul>
+											<li>Basic data management</li>
+											<li>Data visualization</li>
+											<li>Exploratory data analysis and descriptive statictics</li>
+											<li>Writing functions</li>
+											<li>Simulation and parallel computing</li>
+											<li>Communicating data and documenting code for reproducible research</li>
+										</ul>
+									</details>
+
 								</div>
 								
-								<hr />
+								<div id="Misc" class="dept-list">
+									<details>
+										<summary>CHEM 181 (World of Chemistry: Food)</summary><br>
+										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/chem-181"></a></p>
+									</details>
+
+									<details>
+										<summary>CHEM 120 (General Chemistry 2)</summary><br>
+										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/chem-120">CHEM 120 (General Chemistry 2)</a></p>
+									</details>
+
+									<details>
+										<summary>FACC 100 (Introduction to the Engineering Profession)</summary><br>
+										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/facc-100">FACC 100 (Introduction to the Engineering Profession)</a></p>
+									</details>
+
+									<details>
+										<summary>PHYS 142 (Electromagnetism and Optics)</summary><br>
+										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/phys-142">PHYS 142 (Electromagnetism and Optics)</a></p>
+									</details>
+
+
+								</div>
+							</p>								
+							</div><br>
+
+								
+
+								
+								<!--<hr />-->
+							<div id="uvic" class="school-list">
+								<h2 class="school-name">University of Victoria</h3>
+								<p>
+									Engineering (General)<br>
+									GPA: 8.26/9.0<br>
+									First Year Representative: UVic Engineering Students' Society<br>
+									Indigenous Engineering and Computer Science Entrance Scholarship<br>
+									University of Victoria Entrance Scholarship<br>
+									Transferred to McGill after 1 year<br>
+									<span class="dept-name" onclick="showDepartmentClasses('all-uvic')">All Courses:</span>
+									<div id="all-uvic" class="dept-list">
+										<details>
+											<summary>CSC 115 (Introduction to Programming: II)</summary>
+										</details>
+										<details>
+											<summary>CSC 111 (Fundamentals of Programming with Engineering Applications)</summary>
+										</details>
+										<details>
+											<summary>ENGR 141 (Engineering Mechanics)</summary>
+										</details>
+										<details>
+											<summary>ENGR 120 (Design and Communication II)</summary>
+										</details>
+										<details>
+											<summary>ENGR 110 (Design and Communication I)</summary>
+										</details>
+										<details>
+											<summary>MATH 122 (Logic and Foundations)</summary>
+										</details>
+										<details>
+											<summary>MATH 110 (Matrix Algebra for Engineers)</summary>
+										</details>
+										<details>
+											<summary>MATH 101 (Calculus II)</summary>
+										</details>
+										<details>
+											<summary>MATH 100 (Calculus I)</summary>
+										</details>
+										<details>
+											<summary>PHYS 111 (Introductory Physics II)</summary>
+										</details>
+										<details>
+											<summary>PHYS 110 (Introductory Physics I)</summary>
+										</details>
+									</div>
+								</p>
+							</div>
+								
+							
+								<!--<hr />-->
 							</article>
 						
 
