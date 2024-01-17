@@ -35,3 +35,20 @@ function showSchoolDescription(schoolId) {
 
   school.style.display = "block";
 }
+
+function showDepartmentClasses(deptId) {
+  var dept = document.getElementById(deptId);
+  var allDepts = document.getElementsByClassName("dept-list");
+  
+  // if dept display is block, change it to none and return
+  if (dept.style.display === "block") {
+    dept.style.display = "none";
+    return;
+  }
+
+  for (var i = 0; i < allDepts.length; i++) {
+      allDepts[i].style.display = "none";
+  }
+
+  dept.style.display = "block";
+}
