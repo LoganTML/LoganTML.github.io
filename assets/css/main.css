@@ -1721,5 +1721,12 @@ input, select, textarea {
 			padding: 5px;
 			margin: 5px;
 		}
+
+		.course-list {
+			display: block;
+		}
 		
+		p {
+			padding-bottom: none;
+		}
 		

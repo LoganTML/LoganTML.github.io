@@ -36,19 +36,44 @@ function showSchoolDescription(schoolId) {
   school.style.display = "block";
 }
 
-function showDepartmentClasses(deptId) {
-  var dept = document.getElementById(deptId);
-  var allDepts = document.getElementsByClassName("dept-list");
-  
-  // if dept display is block, change it to none and return
-  if (dept.style.display === "block") {
-    dept.style.display = "none";
-    return;
-  }
+function showDepartmentClasses(deptId, uvic_bool, mcgill_bool) {
+  var allDepts = document.getElementsByClassName('course-list');
 
   for (var i = 0; i < allDepts.length; i++) {
+
+    // Make each element visible if it contains the selected class
+    cur_classes = allDepts[i].classList;
+    is_topic = 0;
+    is_uvic = 0;
+    is_mcgill = 0;
+    for (var j = 0; j < cur_classes.length; j++) {
+      if (deptId == cur_classes[j]) {
+        is_topic = 1;
+      } else if (cur_classes[j] == "uvic") {
+        is_uvic = 1;
+      } else if (cur_classes[j] == "mcgill") {
+        is_mcgill = 1;
+      }
+    }
+    if (is_topic == 0 || (is_uvic && !uvic_bool) || (is_mcgill && !mcgill_bool)) {
       allDepts[i].style.display = "none";
+    } else {
+      allDepts[i].style.display = "block";
+    }
   }
 
-  dept.style.display = "block";
+}
+
+function selectDept() {
+  var uvicCheckbox = document.getElementById("uvic-checkbox");
+  var mcgillCheckbox = document.getElementById("mcgill-checkbox");
+  var courseTopic = document.getElementById("course-topic");
+
+  var uvic_bool = uvicCheckbox.checked;
+  var mcgill_bool = mcgillCheckbox.checked;
+
+  var deptId = courseTopic.value;
+
+  showDepartmentClasses(deptId, uvic_bool, mcgill_bool)
+
 }

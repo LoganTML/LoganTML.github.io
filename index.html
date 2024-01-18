@@ -62,17 +62,17 @@
 								<p>Here are some of the projects I've worked on recently:</p>
 								<ul>
 									<li>
-										<b><a href="https://rr-visualization.vercel.app/">Red Rising Social Networks</a></b><br>
-										Using Python, specifically the libraries NetworkX and PyVis, I constructed a social network for each book in the series Red Rising from 
+										<b><a href="https://rr-visualization.vercel.app/">Red Rising Social Network Visualization</a></b><br>
+										Using Python, specifically the libraries NetworkX and PyVis, I constructed a social network for each of the six books in the series Red Rising using 
 										a .txt file of each book, and analyzed the performance of several centrality measures and the Louvain Community 
 										Detection algorithm on each network.  The visualizations, as well as a more detailed explanation is available 
 										at the link above, and the source code is available on my <a href="https://github.com/LoganTML/RR-Visualization">GitHub</a>.
 									</li>
 									<li>
 										<b>COMP 424 - AI Agent</b><br>
-										In COMP 424, my partner and I created an agent, "Minimax Search with Alpha-Beta Pruning and Fixed Breadth and Depth", and wrote a report 
-										on the process and our design decisions. The agent plays the game "Colosseum Survival!", winning 63.78% of its games against agents from other 
-										students in the class and 100% of its games against a random agent, achieving an A grade for the project.
+										In COMP 424, my partner and I created the agent "Minimax Search with Alpha-Beta Pruning and Fixed Breadth and Depth", which plays the game "Colosseum Survival!", 
+										and wrote a report on the process and our design decisions.  The agent won 63.78% of its games against agents from other 
+										students in the class, and 100% of its games against a random agent, achieving an A grade for the project.
 									</li>
 									<li>
 										<b>COMP 551 - Papers</b><br>
@@ -82,7 +82,7 @@
 									</li>
 									<li>
 										<b><a href="https://chrome.google.com/webstore/detail/tabulator/jmblkmlknemipmflaegcnaiadfpfekbd?hl=en&authuser=1">Tabulator</a></b><br>
-										Using JavaScript, I created a chrome extension, Tabulator, which allows users to quickly group tabs by URL using its simple, single-button interface.  
+										Using JavaScript, I created a chrome extension, Tabulator, which allows users to quickly group tabs by their URL using its simple, single-button interface.  
 										It is currently available on the Chrome Web Store, with over six users (seven) and a 5-star rating.
 									</li>
 									<li>
@@ -169,25 +169,74 @@
 							<h2 class="major">Education</h2>
 							
 							<div id="mcgill" class="school-list">
-							<h2 class="school-name">McGill University</h3>
+							<h3 class="school-name">McGill University</h3>
 							<p>	
 								Bachelor of Science: Computer Science - Artificial Intelligence (2025)<br>
 								GPA: 3.64/4.0<br>
 								VP Internal: <a href="https://ssmu.ca/clubs/athletics-recreation-clubs/ssmu-power-lifting/">SSMU Powerlifting Club</a><br>
 								Member: McGill Men's Volleyball Club Team, Compete McGill, McGill AI Society<br>
-								Recipient: Suncor Emerging Leaders in Engineering Award<br>
-								Courses: <span class="dept-name" onclick="showDepartmentClasses('COMP')">Computer Science</span> / <span class="dept-name" onclick="showDepartmentClasses('MATH')">Mathematics and Statistics</span> / <span class="dept-name" onclick="showDepartmentClasses('Misc')">Other</span>
+								Recipient: Suncor Emerging Leaders in Engineering Award							
+							</p>								
+							</div><br>
+
 								
-								<div id="COMP" class="dept-list">
-									<details>
+
+								
+								<!--<hr />-->
+							<div id="uvic" class="school-list">
+								<h3 class="school-name">University of Victoria</h3>
+								<p>
+									Engineering (General)<br>
+									GPA: 8.26/9.0<br>
+									First Year Representative: UVic Engineering Students' Society<br>
+									Indigenous Engineering and Computer Science Entrance Scholarship<br>
+									University of Victoria Entrance Scholarship<br>
+									Transferred to McGill after 1 year
+								</p>
+							</div><br>
+
+							<div id="courses" class="school-list">
+								<h3 class="school-name">Courses</h3>
+								<p>	
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field">
+												<label for="course-topic">Topic</label>
+												<select id="course-topic" onchange="selectDept()">
+													<option value="course-list">All</option>
+													<option value="COMP">Computer Science</option>
+													<option value="MATH">Mathematics and Statistics</option>
+													<option value="AI">Artificial Intelligence/Machine Learning/Data Science</option>
+													<option value="OOP">Object Oriented Programming</option>
+													<option value="PYTHON">Python</option>
+													<option value="JAVA">Java</option>
+													<option value="SQL">SQL</option>
+													<option value="LOW">Low-Level Programming</option>
+													<option value="FUNC">Functional Programming</option>
+												</select>
+											</div><br>
+											<div class="field half">
+												<input type="checkbox" id="mcgill-checkbox" checked onchange="selectDept()">
+												<label for="mcgill-checkbox">McGill</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="uvic-checkbox" checked onchange="selectDept()">
+												<label for="uvic-checkbox">UVic</label>
+											</div>
+										</div>
+									</form>
+									
+									<!-- I should probably use JSON for these but I like the 
+									inconsistent formatting for now.  I'll get to that eventually. -->
+									<details class="course-list COMP AI MATH PYTHON mcgill">
 										<summary>COMP 579 (Reinforcement Learning)</summary><br>
 										<p>
 											Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-579">COMP 579 (Reinforcement Learning)</a><br>
 											In progress (Winter 2024).
 										</p>
 									</details>
-
-									<details>
+	
+									<details class="course-list COMP AI PYTHON OOP MATH mcgill">
 										<summary>COMP 551 (Applied Machine Learning)</summary><br>
 										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-551">COMP 551 (Applied Machine Learning)</a><br></p>
 											
@@ -220,13 +269,13 @@
 												</ul>
 									</details>
 									
-									<details>
+									<details class="course-list COMP AI PYTHON OOP MATH mcgill">
 										<summary>COMP 424 (Artificial Intelligence)</summary><br>
-
+	
 										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-424">COMP 424 (Artificial Intelligence)</a><br></p>
 										<h3>Projects</h3>
 										<ul>
-											<li>Created an agent "", available on my <a href="https://github.com/LoganTML/COMP-424-Final-Project/tree/main">GitHub</a>, that plays the game "Colosseum Survival!".  It achieved a win rate of 
+											<li>Created an agent "Minimax Search with Alpha-Beta Pruning and Fixed Breadth and Depth", available on my <a href="https://github.com/LoganTML/COMP-424-Final-Project/tree/main">GitHub</a>, that plays the game "Colosseum Survival!".  It achieved a win rate of 
 												63.78% against bots created by other students in the class, and 100% against a random agent.  We wrote a report that compared 
 												our implementation to any possible alternatives, and examined possibilities and strategies for creating a more powerful agent, achieving an A grade for 
 												the project.</li>
@@ -247,8 +296,8 @@
 													<li>Reinforcement Learning (Bandit Algorithms, Deep Q Networks, Bellman Equations, Policy Iteration)</li>
 												</ul>
 									</details>
-
-									<details>
+	
+									<details class="course-list COMP JAVA SQL mcgill">
 										<summary>COMP 421 (Database Systems)</summary><br>
 										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-421">COMP 421 (Database Systems)</a></p>
 										
@@ -270,8 +319,8 @@
 											<li>Graph Databases</li>
 										</ul>
 									</details>
-
-									<details>
+	
+									<details class="course-list COMP AI OOP LOW mcgill">
 										<summary>COMP 370 (Introduction to Data Science)</summary><br>
 										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-370">COMP 370 (Introduction to Data Science)</a></p>
 										
@@ -282,7 +331,7 @@
 												the sentiment of each article, then created several graphs to visualize and further our understanding of the relationship between the two.
 											</li>
 										</ul>
-
+	
 										<h3>Topics</h3>
 										<ul>
 											<li>The Data Science Process</li>
@@ -295,8 +344,8 @@
 											<li>Analysis (Statistical + Network Analysis)</li>
 										</ul>
 									</details>
-
-									<details>
+	
+									<details class="course-list COMP mcgill">
 										<summary>COMP 360 (Algorithm Design)</summary><br>
 										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-360">COMP 360 (Algorithm Design)</a></p>
 										<h3>Topics</h3>
@@ -306,10 +355,10 @@
 											<li>Complexity Theory (P/NP class definitions, Reductions, NP-Completeness)</li>
 											<li>Approximation Algorithms</li>
 										</ul>
-
+	
 									</details>
-
-									<details>
+	
+									<details class="course-list COMP OOP LOW mcgill">
 										<summary>COMP 322 (Introduction to C++)</summary><br>
 										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-322">COMP 322 (Introduction to C++)</a></p>
 										<h3>Projects</h3>
@@ -321,8 +370,8 @@
 											<li>Studied programming fundamentals (OOP, File I/O, etc.) in C++</li>
 										</ul>
 									</details>
-
-									<details>
+	
+									<details class="course-list COMP PYTHON mcgill">
 										<summary>COMP 321 (Programming Challenges)</summary><br>
 										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-321">COMP 321 (Programming Challenges)</a></p>
 										<h3>Projects</h3>
@@ -341,8 +390,8 @@
 										</ul>
 										
 									</details>
-
-									<details>
+	
+									<details class="course-list COMP LOW mcgill">
 										<summary>COMP 308 (Computer Systems Lab)</summary><br>
 										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-308">COMP 308 (Computer Systems Lab)</a></p>
 										<h3>Projects</h3>
@@ -356,8 +405,8 @@
 											<li>Graphics- drawing dots, lines, triangles etc. in assembly.  Colouring and more complex shapes in C/OpenGL.  Shading in GLSL</li>
 										</ul>
 									</details>
-
-									<details>
+	
+									<details class="course-list COMP OOP JAVA mcgill">
 										<summary>COMP 303 (Software Design)</summary><br>
 										<p>Course website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-303">COMP 303 (Software Design)</a></p>
 										<h3>Topics</h3>
@@ -366,8 +415,8 @@
 												including encapsulation, design patterns, and unit testing.</li>
 										</ul>
 									</details>
-
-									<details>
+	
+									<details class="course-list COMP FUNC mcgill">
 										<summary>COMP 302 (Programming Languages and Paradigms)</summary><br>
 										<p>Course website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-302">COMP 302 (Programming Languages and Paradigms)</a></p>
 										<h3>Topics</h3>
@@ -381,8 +430,8 @@
 												interpreters, polymorphism, subtyping</li>
 										</ul>
 									</details>
-
-									<details>
+	
+									<details class="course-list COMP LOW mcgill">
 										<summary>COMP 273 (Introduction to Computer Systems)</summary><br>
 										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-273">COMP 273 (Introduction to Computer Systems)</a></p>
 										<h3>Projects</h3>
@@ -398,22 +447,21 @@
 												pipelining.</li>
 										</ul>
 									</details>
-
-									<details>
+	
+									<details class="course-list COMP mcgill">
 										<summary>COMP 251 (Algorithms and Data Structures)</summary><br>
 										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-251">COMP 251 (Algorithms and Data Structures)</a></p>
 									</details>
 								
-									<details>
+									<details class="course-list COMP LOW mcgill">
 										<summary>COMP 206 (Introduction to Software Systems)</summary>
 										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/comp-206">COMP 206 (Introduction to Software Systems)</a><br></p>
 									</details>
-
-
-								</div>
-
-								<div id="MATH" class="dept-list">
-									<details>
+	
+								
+	
+								
+									<details class="course-list MATH mcgill">
 										<summary>MATH 324 (Statistics)</summary><br>
 										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/math-324">MATH 324 (Statistics)</a><br></p>
 										<h3>Topics</h3>
@@ -428,8 +476,8 @@
 											<li>Chi-square test, contingency tables</li>
 										</ul>
 									</details>
-
-									<details>
+	
+									<details class="course-list MATH mcgill">
 										<summary>MATH 323 (Probability)</summary><br>
 										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/math-323">MATH 323 (Probability)</a><br></p>
 										<h3>Topics</h3>
@@ -441,8 +489,8 @@
 											<li>Independence of random variables, Chebyshev’s Inequality, the central limit theorem, the weak law of large numbers</li>
 										</ul>
 									</details>
-
-									<details>
+	
+									<details class="course-list MATH mcgill">
 										<summary>MATH 263 (Ordinary Differential Equations for Engineers)</summary><br>
 										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/math-263">MATH 263 (Ordinary Differential Equations for Engineers)</a><br></p>
 										<h3>Topics</h3>
@@ -462,8 +510,8 @@
 											<li>Introduction to numerical methods and nonlinear differential equations</li>
 										</ul>
 									</details>
-
-									<details>
+	
+									<details class="course-list MATH mcgill">
 										<summary>MATH 262 (Intermediate Calculus)</summary><br>
 										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/math-262">MATH 262 (Intermediate Calculus)</a><br></p>
 										<h3>Topics</h3>
@@ -475,8 +523,8 @@
 											<li>Multiple integrals, including surface area and change of variables</li>
 										</ul>
 									</details>
-
-									<details>
+	
+									<details class="course-list MATH mcgill">
 										<summary>MATH 223 (Linear Algebra)</summary><br>
 										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/math-223">MATH 223 (Linear Algebra)</a><br></p>
 										<h3>Topics</h3>
@@ -487,8 +535,8 @@
 											<li>Applications</li>
 										</ul>
 									</details>
-
-									<details>
+	
+									<details class="course-list MATH AI mcgill">
 										<summary>MATH 208 (Introduction to Statistical Computing)</summary><br>
 										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/math-208">MATH 208 (Introduction to Statistical Computing)</a><br></p>
 										<h3>Topics</h3>
@@ -501,86 +549,72 @@
 											<li>Communicating data and documenting code for reproducible research</li>
 										</ul>
 									</details>
-
-								</div>
+	
 								
-								<div id="Misc" class="dept-list">
-									<details>
+								
+								
+									<details class="course-list Misc mcgill">
 										<summary>CHEM 181 (World of Chemistry: Food)</summary><br>
 										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/chem-181"></a></p>
 									</details>
-
-									<details>
+	
+									<details class="course-list Misc mcgill">
 										<summary>CHEM 120 (General Chemistry 2)</summary><br>
 										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/chem-120">CHEM 120 (General Chemistry 2)</a></p>
 									</details>
-
-									<details>
+	
+									<details class="course-list Misc mcgill">
 										<summary>FACC 100 (Introduction to the Engineering Profession)</summary><br>
 										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/facc-100">FACC 100 (Introduction to the Engineering Profession)</a></p>
 									</details>
-
-									<details>
+	
+									<details class="course-list Misc mcgill">
 										<summary>PHYS 142 (Electromagnetism and Optics)</summary><br>
 										<p>Course Website: <a href="https://www.mcgill.ca/study/2023-2024/courses/phys-142">PHYS 142 (Electromagnetism and Optics)</a></p>
 									</details>
-
-
-								</div>
-							</p>								
-							</div><br>
-
-								
-
-								
-								<!--<hr />-->
-							<div id="uvic" class="school-list">
-								<h2 class="school-name">University of Victoria</h3>
-								<p>
-									Engineering (General)<br>
-									GPA: 8.26/9.0<br>
-									First Year Representative: UVic Engineering Students' Society<br>
-									Indigenous Engineering and Computer Science Entrance Scholarship<br>
-									University of Victoria Entrance Scholarship<br>
-									Transferred to McGill after 1 year<br>
-									<span class="dept-name" onclick="showDepartmentClasses('all-uvic')">All Courses:</span>
-									<div id="all-uvic" class="dept-list">
-										<details>
-											<summary>CSC 115 (Introduction to Programming: II)</summary>
-										</details>
-										<details>
-											<summary>CSC 111 (Fundamentals of Programming with Engineering Applications)</summary>
-										</details>
-										<details>
-											<summary>ENGR 141 (Engineering Mechanics)</summary>
-										</details>
-										<details>
-											<summary>ENGR 120 (Design and Communication II)</summary>
-										</details>
-										<details>
-											<summary>ENGR 110 (Design and Communication I)</summary>
-										</details>
-										<details>
-											<summary>MATH 122 (Logic and Foundations)</summary>
-										</details>
-										<details>
-											<summary>MATH 110 (Matrix Algebra for Engineers)</summary>
-										</details>
-										<details>
-											<summary>MATH 101 (Calculus II)</summary>
-										</details>
-										<details>
-											<summary>MATH 100 (Calculus I)</summary>
-										</details>
-										<details>
-											<summary>PHYS 111 (Introductory Physics II)</summary>
-										</details>
-										<details>
-											<summary>PHYS 110 (Introductory Physics I)</summary>
-										</details>
-									</div>
-								</p>
-							</div>
+	
+									<!-- UVic Courses start here -->
+									<details class="course-list COMP OOP JAVA uvic">
+										<summary>CSC 115 (Introduction to Programming: II) | UVIC</summary>
+									</details>
+									<details class="course-list COMP LOW uvic">
+										<summary>CSC 111 (Fundamentals of Programming with Engineering Applications) | UVIC</summary>
+									</details>
+									<details class="course-list Misc uvic">
+										<summary>ENGR 141 (Engineering Mechanics) | UVIC</summary>
+									</details>
+									<details class="course-list Misc uvic">
+										<summary>ENGR 130 (Introduction to Professional Practice) | UVIC</summary>
+									</details>
+									<details class="course-list Misc uvic">
+										<summary>ENGR 120 (Design and Communication II) | UVIC</summary>
+									</details>
+									<details class="course-list Misc uvic">
+										<summary>ENGR 110 (Design and Communication I) | UVIC</summary>
+									</details>
+									<details class="course-list MATH uvic">
+										<summary>MATH 122 (Logic and Foundations) | UVIC</summary>
+									</details>
+									<details class="course-list MATH uvic">
+										<summary>MATH 110 (Matrix Algebra for Engineers) | UVIC</summary>
+									</details>
+									<details class="course-list MATH uvic">
+										<summary>MATH 101 (Calculus II) | UVIC</summary>
+									</details>
+									<details class="course-list MATH uvic">
+										<summary>MATH 100 (Calculus I) | UVIC</summary>
+									</details>
+									<details class="course-list Misc uvic">
+										<summary>PHYS 111 (Introductory Physics II) | UVIC</summary>
+									</details>
+									<details class="course-list Misc uvic">
+										<summary>PHYS 110 (Introductory Physics I) | UVIC</summary>
+									</details>
+	
+									
+								</p>								
+								</div><br>
+	
 								
 							
 								<!--<hr />-->
